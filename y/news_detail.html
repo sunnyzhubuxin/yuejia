@@ -1,0 +1,442 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>家长课堂-威海悦佳教育服务平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- start slider -->
+	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script> 
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_2').camera({
+				
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false
+			});
+		});
+	</script>
+<!-- end slider -->
+<!-- start gallery -->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: 0}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+<!-- Add fancyBox main JS and CSS files -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+<!--star wrap-->      
+	    
+	<div id="login" class="mfp-hide small-dialog1 login-dialog"> 
+   <div class="pop_up"> 
+    <h2 style="text-align: center;">登录</h2> 
+    <form class="form-horizontal" role="form"> 
+     <div class="form-group"> 
+      <label for="firstname" class="col-sm-2 control-label">用户名</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="firstname" placeholder="请输入名字" /> 
+      </div> 
+     </div> 
+     <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入姓" /> 
+      </div> 
+     </div> 
+   
+     <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10"> 
+       <button type="submit" class="btn btn-default">登录</button> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+
+    
+
+     <div id="regist" class="mfp-hide small-dialog1 regist-dialog"> 
+   <div class="pop_up"> 
+    <h2 style="text-align: center;">注册</h2> 
+    <form class="form-horizontal" role="form"> 
+     <div class="form-group"> 
+      <label for="firstname" class="col-sm-2 control-label">用户名</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="firstname" placeholder="请输入用户名" /> 
+      </div> 
+     </div> 
+     <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入密码" /> 
+      </div> 
+     </div> 
+      <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">重复密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入密码" /> 
+      </div> 
+     </div> 
+    
+     <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10"> 
+       <button type="submit" class="btn btn-default">登录</button> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+      	 <div style="position: absolute;top:3%;right: 1%">	
+				             <a class="popup-with-zoom-anim" href="#login">登录|</a>
+				              <a class="popup-with-zoom-anim" href="#regist">注册</a>
+		 </div>
+
+
+<!--star-wrap-->      
+	    <div class="wrap">	
+	    	<!--header--> 
+     <style>
+     	
+     	.dropdown-menu{
+     		margin-top: -0.5em
+     	}
+     </style>
+	      			<div class="header">
+
+	      				<!--start-logo-->
+				          <div class="logo">	
+				             <a href="index.html"><h1>威海悦佳<span>教育服务平台</span></h1></a>
+				          </div>
+				        <!--end-logo-->
+	      	 			<!--start-menu-->
+					  	<div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt= " " /></a>
+							<ul class="nav">
+								<li class="active"><a href="index.html">首页</a></li>
+								<li ><a href="about.html">关于我们</a></li>
+								<li><a href="jzkt.html">家长课堂</a></li>
+								<li><a href="portfolio.html">知名幼儿园</a></li>
+								<li><a href="contact.html">课外辅导</a></li>
+								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">便民 <b class="caret"></b></a>
+                 
+                                  <ul class="dropdown-menu">
+                                  	  <li><a href="#">医院</a></li>
+                                  	  <li><a href="http://www.weihai.tv/special/jjzd/">交警</a></li>
+                                  	  <li><a href="#">收费</a></li>
+                                  	  
+                                  </ul>
+
+
+								</li>
+								<li><a href="join.html">加入我们</a></li>
+								<li><a href="contact.html">在线辅导</a></li>
+							<div class="clear"> </div>
+						    </ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				        </div>	
+				        <div class="clear"> </div>
+						<!--end-menu-->
+				            				
+				</div>
+				</div>
+		  <!--end-header-->
+<!--end wrap-->   
+<!--top- heading-->
+<div clasS="top-heading">
+	<!--start-wrap-->
+	<div class="wrap">
+		<h1>新闻资讯</h1>
+	</div>
+	<!--end wrap-->
+</div> 
+<!--start portfolio-->
+<div class="wrap container">
+	<div class="portofolio-item row">
+
+          <div class="col-md-9">
+		<h1>山东学前教育新规实施</h1>
+		<p style="padding: 10px 2em;">2016-12-15</p>
+
+			<style>
+		
+
+
+    .img-info p{
+	font-family: 'Microsoft yahei';
+	color: #525252;
+	
+	
+	font-weight: 100;
+	line-height: 2em;
+}
+
+			</style>
+			<div class="img-info">
+                 <img src="images/slider6.jpg" alt="" />
+				<p>     4月1日起，《山东省学前教育规定》(以下简称《规定》)正式实施。昨天上午，省政府新闻办举行新闻发布会，省教育厅副厅长张志勇就《规定》的主要内容作详细说明。《规定》明确，配套小区必须规划建设幼儿园；规划设计涉及幼儿园布局的，应当事先征求教育行政部门的意见；配套幼儿园要与居住区建设同步规划、同步建设、同步交付使用。</p>
+				<p> 
+
+　　幼儿园课堂严禁教外语
+
+　　“幼儿园严禁教授小学内容，不能种别人的地荒了自己的田。”昨天上午，张志勇在回答记者提问时表示。他说，学前教育机构不得从事违背幼儿教育规律和损害幼儿身心健康的活动，不得组织奥数培训、珠脑心算、外语、拼音、写字等活动，不得给幼儿布置家庭作业。
+
+　　对于社会上非常关心的幼儿园开设外语教学问题，张志勇认为，在国家有关学前教育行政法规、文件政策中，从来没有要求幼儿园进行外语教育的内容，语言领域教育是指母语教育，幼儿期是学习语言的最关键时期，一定要让孩子学习好母语。另外，《山东省义务教育阶段课程设置方案》中，小学一、二年级没有英语课程设置。
+
+　　优先改扩建农村幼儿园
+
+　　我省将重点发展农村学前教育，优先改建和扩建农村幼儿园，并在财政投入、教师配备、表彰奖励等方面向农村倾斜。
+
+　　张志勇介绍说，《规定》对改善农村学前教育提出了具体举措，提出县级以上人民政府应当合理配置教育资源，缩小城乡之间、区域之间、园际之间的差距，各级人民政府应当重点发展农村学前教育。
+
+　　《规定》还明确了发展农村学前教育的主要途径，一是县、乡镇(街道)政府建设好公办中心幼儿园，并保障其正常运转和发展；二是在有条件的农村中小学按照“四独立”(园舍独立、经费独立、人员独立、教学独立)的原则附设幼儿园；三是中小学布局调整富余校舍和闲置的公共资源优先用于举办幼儿园。
+
+　　学前规划考虑二胎政策因素
+
+　　我省正在研究制定实施第二期学前教育三年行动计划。特别是单独二胎政策的实施，将给学前教育带来一定的挑战和压力，这将是二期行动计划中需要考虑的重要因素之一。“整体上看，我省学前教育事业发展迅速，成效显著，但由于底子薄、欠账多，目前仍是整个教育体系中最薄弱环节。”张志勇坦言，目前，山东学前三年儿童入园率仍然没有达到全面普及，资源配置不均衡，学前教育成本分担和运行保障机制建设滞后，幼儿园教师队伍仍然存在着数量不足、素质不高、工资待遇低等问题，“小学化”现象仍然存在，这些都将是二期行动计划中需要考虑的重要因素。
+
+　　举 例
+
+　　城区配套幼儿园“不配套”
+
+　　长期以来，因为没有法律依据和保障，城镇居住区配套幼儿园建设存在着没有规划、或者改建未建、建后挪作他用、高价出租办成高收费民办幼儿园的情况。张志勇举例说，某市自2005年以来，城区有58个住宅小区规划建设幼儿园，其中只有17个建成或正在建设幼儿园；15处已经建设的小区配套幼儿园中，仅有7处投入使用；7处幼儿园均被个人租赁成举办高收费的民办幼儿园，2处被挪作他用，6处尚未投入使用。
+
+　　回 应
+
+　　我省未发现集体服药事件
+
+　　近期，陕西、吉林等地个别幼儿园违规对幼儿集体服用处方药事件被曝光。张志勇在回答记者提出的有关问题时介绍，我省已经要求各级教育行政部门会同卫生计生行政部门组织力量对中小学、幼儿园落实健康服务管理有关文件情况进行拉网式排查，重点检查行政区域内幼儿园是否有违规组织幼儿群体服药等行为。目前，根据各市上报情况，我省中小学、幼儿园未发现违规开展群体性服药事件。
+
+。</p>
+				
+			</div>
+			</div>
+
+			 <div class="col-md-3">
+			 <div class="grid-right-headings">
+					<h2><a href="#">推荐阅读</a></h2>
+					<h6> </h6>
+						<div class="clear"> </div>
+				</div>
+				<style>
+					.seach-links a{
+                     font-size: 0.9em
+                     color:#333;
+                     font-family: "microsoft yahei"
+					}
+
+				</style>
+				<div class="seach-links commend">
+				<p><a href="#">2016年学前教育政策法规，最新学前教育政策法规解读</a><span>2017-03-19</span></p>
+				<p><a href="#">山东严禁幼儿园小学化今起生效 呼吁:正确定义起跑线</a><span>2017-03-19</span></p>
+				<p><a href="#"> 山东学前教育新规实施</a><span>2017-03-19</span></p>
+				<p><a href="#">山东严禁幼儿园小学化今起生效 呼吁:正确定义起跑线</a><span>2017-03-19</span></p>
+				<p><a href="#">山东严禁幼儿园小学化今起生效 呼吁:正确定义起跑线</a><span>2017-03-19</span></p>
+				<p><a href="#"> 山东严禁幼儿园小学化今起生效 呼吁:正确定义起跑线</a><span>2017-03-19</span></p>
+				</div>
+				
+
+			 </div>
+		<!-- 	<div class="portofolio-item-con">
+			<div class="heading">
+				<h2>recent wroks</h2>
+				<h6> </h6>
+					<div class="clear"> </div>
+			</div>
+			<div class="main_btm"> -->
+		
+			<!--
+			<div id="small-dialog1" class="mfp-hide">
+				<div class="pop_up">
+					<h2>character desing</h2>
+					<img src="images/popup.jpg" alt=""/>
+					<p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+				</div>
+			</div>
+			 -->	
+		<!--start-content
+		
+			<div class="gallery">
+					<div class="clear"> </div>
+					<div class="container">
+					
+			<div id="gallerylist">
+			
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image1.jpg"  alt="Image 1"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>character desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image2.jpg"  alt="Image 2"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>brochure desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image3.jpg"  alt="Image 3" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>social media buttons</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image4.jpg"  alt="Image 4" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>10 amazing websites</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+
+			</div>																																							
+		</div>
+	</div> container -->
+	<!-- <script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script type="text/javascript">$('body').flipLightBox()</script>
+	<div class="clear"> </div> -->
+	</div>
+	</div>
+	</div>
+</div>
+<!--start footer-->
+<div class="footer">
+	<div class="footer-main wrap">
+	<div class="footer-grids">
+		<div class="fgrid">
+			<h3>关于我们</h3>
+			<p> 博苑新田幼儿园成立于2011年8月，占地面积2600m平米，建筑面积3341平米，拥有10个教学班，三十多名教职工；幼儿园配有游泳馆、多媒体教学、种植园等多元化教育资源。开放24小时视频直播，在威海打造一所公开化、透明化的幼儿园。</p>
+			<p> 幼儿园配有游泳馆、多媒体教学、种植园等多元化教育资源。开放24小时视频直播，在威海打造一所公开化、透明化的幼儿园。</p>
+		</div>
+		<div class="fgrid">
+			<h3>站内导航</h3>
+				<div>
+					<p style="float: left;margin-right: 2em"><a href="#">关于我们</a> </p>
+					<p><a href="#">家长课堂</a> </p>
+					
+				</div>
+				<div>
+				<p style="float: left;margin-right: 2em"><a href="#">知名园所</a> </p>
+					<p><a href="#">在线辅导</a></p>
+					
+				</div>
+				<div>
+				<p style="float: left;margin-right: 2em"><a href="#">家长课堂</a> </p>
+					<p><a href="#">新闻资讯</a></p>
+				</div>
+		</div>
+		<div class="fgrid">
+			<h3>联系我们</h3>
+			<p>地址:山东省威海市高区火炬路-213-2号创新创业基地A座446</p>
+			<p>邮箱：information@jetro.com</p>
+			
+			<p>联系电话：0631-5687555</p>
+				<div class="social-media">
+			     <ul>
+			        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+				</ul>
+		</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+</div>
+<!--end footer-->
+<div class="copy-right">
+			<div class="wrap">
+				<div class="copy-right-left">
+					<p>Copyright &copy; 2014.Company name All rights reserved.</p>
+				</div>
+			</div>
+			</div>
+</div>
+
+</body>
+</html>

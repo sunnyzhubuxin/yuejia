@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页-威海悦佳教育服务平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- jQuery -->
+<!--start slider-->
+	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script> 
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_2').camera({
+				
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+<!--end slider-->
+<!--start gallery-->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#gallerylist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#gallerylist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+<!--Add fancyBox main JS and CSS files-->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+
+
+</head>
+<body>
+
+	<div id="login" class="mfp-hide small-dialog1 login-dialog"> 
+   <div class="pop_up"> 
+    <h2 style="text-align: center;">登录</h2> 
+    <form class="form-horizontal" role="form"> 
+     <div class="form-group"> 
+      <label for="firstname" class="col-sm-2 control-label">用户名</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="firstname" placeholder="请输入名字" /> 
+      </div> 
+     </div> 
+     <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入姓" /> 
+      </div> 
+     </div> 
+   
+     <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10"> 
+       <button type="submit" class="btn btn-default">登录</button> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+
+    
+
+     <div id="regist" class="mfp-hide small-dialog1 regist-dialog"> 
+   <div class="pop_up"> 
+    <h2 style="text-align: center;">注册</h2> 
+    <form class="form-horizontal" role="form"> 
+     <div class="form-group"> 
+      <label for="firstname" class="col-sm-2 control-label">用户名</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="firstname" placeholder="请输入用户名" /> 
+      </div> 
+     </div> 
+     <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入密码" /> 
+      </div> 
+     </div> 
+      <div class="form-group"> 
+      <label for="lastname" class="col-sm-2 control-label">重复密码</label> 
+      <div class="col-sm-10"> 
+       <input type="text" class="form-control" id="lastname" placeholder="请输入密码" /> 
+      </div> 
+     </div> 
+    
+     <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10"> 
+       <button type="submit" class="btn btn-default">登录</button> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+      	 <div style="position: absolute;top:3%;right: 1%">	
+				             <a class="popup-with-zoom-anim" href="#login">登录|</a>
+				              <a class="popup-with-zoom-anim" href="#regist">注册</a>
+		 </div>
+
+
+<!--star-wrap-->      
+	    <div class="wrap">	
+	    	<!--header--> 
+     <style>
+     	
+     	.dropdown-menu{
+     		margin-top: -0.5em
+     	}
+     </style>
+
+
+	      		<div class="header">
+
+	      				<!--start-logo-->
+				          <div class="logo">	
+				             <a href="index.html"><h1>威海悦佳<span>教育服务平台</span></h1></a>
+				          </div>
+				        <!--end-logo-->
+	      	 			<!--start-menu-->
+					  	<div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt= " " /></a>
+							<ul class="nav">
+								<li class="active"><a href="index.html">首页</a></li>
+								<li ><a href="about.html">关于我们</a></li>
+								<li><a href="jzkt.html">家长课堂</a></li>
+								<li><a href="portfolio.html">知名幼儿园</a></li>
+								<li><a href="contact.html">课外辅导</a></li>
+								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">便民 <b class="caret"></b></a>
+                 
+                                  <ul class="dropdown-menu">
+                                  	  <li><a href="#">医院</a></li>
+                                  	  <li><a href="http://www.weihai.tv/special/jjzd/">交警</a></li>
+                                  	  <li><a href="#">收费</a></li>
+                                  	  
+                                  </ul>
+
+
+								</li>
+								<li><a href="join.html">加入我们</a></li>
+								<li><a href="contact.html">在线辅导</a></li>
+							<div class="clear"> </div>
+						    </ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				        </div>	
+				        <div class="clear"> </div>
+						<!--end-menu-->
+				            				
+				</div>
+				</div>
+		  <!--end-header-->
+<!--end wrap-->    
+
+<!-- start slider -->
+<div class="main-con">
+	<div class="slider"  >
+		<div class="color"> <span> </span></div>
+		<div class="wrap" style="padding-bottom: 0;" >
+		<div class="fluid_container">
+        <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+            <div data-thumb="images/them1.png" data-src="images/slider1.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <h2>ITEA首届国际少儿书画大赛简介</h2>
+                    <p>随着国际文化的交融，世界的教育理念也在与时俱进，为实现幼儿德智体美的全面发展，即日起，由国际才艺教育协会（ITEA）所主办的首届国际少儿书画大赛征稿活动正式启航。</p>
+                </div>
+            </div>
+            <div data-thumb="images/them2.jpg" data-src="images/slider2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                  <h2>ITEA首届国际少儿书画大赛简介</h2>
+                    <p>随着国际文化的交融，世界的教育理念也在与时俱进，为实现幼儿德智体美的全面发展，即日起，由国际才艺教育协会（ITEA）所主办的首届国际少儿书画大赛征稿活动正式启航。</p>
+                </div>
+            </div>
+            <div data-thumb="images/them3.jpg" data-src="images/slider3.jpg">
+                <div class="camera_caption fadeFromBottom">
+                   <h2>美丽的童年，用心呵护</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div data-thumb="images/them4.jpg" data-src="images/slider4.png">
+                <div class="camera_caption fadeFromBottom">
+               	    <h2>slider four</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div data-thumb="images/them2.jpg" data-src="images/slider2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <h2>slider ofive</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div data-thumb="images/them6.jpg" data-src="images/slider6.jpg">
+                <div class="camera_caption fadeFromBottom">
+                  <h2>slider six</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            
+        </div><!-- #camera_wrap_2 -->
+    </div><!-- .fluid_container -->
+    <div class="clear"></div>
+	</div>
+</div>
+<!--end slider-->
+		     
+
+	<div class="home-page-con">
+		<div class="wrap">
+		<div class="top-grids">
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/news/hot.png" style="" alt=" "/>
+					<h2>热点话题</h2>
+					 <h6 > </h6>
+					<div class="clear"> </div>
+				</div>
+				<ul class="news_list">
+				<li>
+				<a href="news_detail.html">            
+				<img src="images/news/y.png" style="" alt=" " class="col-md-3" />
+
+				<div>环翠教育幼儿园2017年春节假期致家长一封信</div><span>2017-02-18</span></a>
+                 
+      
+				</li>
+                     <div class="clear"></div>
+
+
+
+					<li><a href="news_detail.html">幼儿园里的“萌娃交警” <span>2017-02-18</span> </a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+				
+					
+				</ul>
+				
+				<a class="btn" href="blog.html">More</a>
+			</div>
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/news/d.png" alt=" "/>
+					<h2>园所动态</h2>
+					<h6 > </h6>
+					<div class="clear"> </div>
+				</div>
+				<ul class="news_list">
+				<li>
+				<a href="news_detail.html">            
+				<img src="images/news/g.png" style="" alt=" " class="col-md-3" />
+
+				<div>环翠教育幼儿园2017年春节假期致家长一封信</div><span>2017-02-18</span></a>
+                 
+      
+				</li>
+                     <div class="clear"></div>
+
+
+
+					<li><a href="news_detail.html">幼儿园里的“萌娃交警” <span>2017-02-18</span> </a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+				
+					
+				</ul>
+				<a class="btn" href="blog.html">More</a>
+			</div>
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/news/f.png" alt=" "/>
+					<h2>法律政策</h2>
+					<h6 > </h6>
+					<div class="clear"> </div>
+				</div>
+				<ul class="news_list">
+				<li>
+				<a href="news_detail.html">            
+				<img src="images/news/x.png" style="" alt=" " class="col-md-3" />
+
+				<div>环翠教育幼儿园2017年春节假期致家长一封信</div><span>2017-02-18</span></a>
+                 
+      
+				</li>
+                     <div class="clear"></div>
+
+
+
+					<li><a href="news_detail.html">幼儿园里的“萌娃交警” <span>2017-02-18</span> </a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+					<li><a href="news_detail.html">感恩妈妈情，温暖三月天 <span>2017-03-19</span></a></li>
+				
+					
+				</ul>
+				<a class="btn" href="blog.html">More</a>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		
+			<div class="heading">
+				<h2>集团园所</h2>
+				<h6> </h6>
+					<div class="clear"> </div>
+			</div>
+		
+<!--end home-page-con-->
+<div class="main_btm">
+		
+			<!--start-mfp -->	
+			<div id="small-dialog1" class="mfp-hide small-dialog1">
+				<div class="pop_up">
+					<h2>博苑新田幼儿园</h2>
+					<img src="images/popup1.png" alt=" "/>
+					<p class="para">博苑新田幼儿园倡导爱与平等自由的教育理念，采用蒙特梭利教学法进行一日活动安排，尊重孩子的人格尊严，让孩子在被爱中学会爱他人爱环境；各班配有蒙特梭利教具，让孩子自由选择工作，独立操作，专心致志，从而磨练了意志 ，增强自信心和自制力，培养独立自主的精神！建构平等自由和谐的人文环境。</p>
+				</div>
+			</div>
+
+			<!--end-mfp -->	
+
+            	<div id="small-dialog2" class="mfp-hide small-dialog1">
+				<div class="pop_up">
+					<h2>威海市市级机关幼儿园</h2>
+					<img src="images/popup2.png" alt=" "/>
+					<p class="para">威海市市级机关幼儿园总园，创建于1990年6月，坐落在风景优美的菊花顶生活小区，占地24亩，建筑面积3000平方米。幼儿园以现代化的构思，独特的设计，分别建筑了充满童趣和艺术美感的幼儿活动室、计算机室、亲子阅览室、娱乐共享厅、形体训练室、科学发现室、多功能活动大厅等</p>
+				</div>
+			</div>
+ 
+            	<div id="small-dialog3" class="mfp-hide small-dialog1">
+				<div class="pop_up">
+					<h2>威海市环翠教育幼儿园</h2>
+					<img src="images/image1.png" alt=" "/>
+					<p class="para">威海市环翠教育幼儿园原名一轻幼儿园，创建于1983年，位于环翠区环境优美的南山社区。占地面积2869m2，建筑面积3073m2。规模11个班，教职工43名，每班配备三名教师，教师专业合格率100%,大专以上学历100%。1994年被评为省级示范幼儿园，2011年划归环翠区教育局管理,2013年年底正式更名为威海市环翠教育幼儿园。</p>
+				</div>
+			</div>
+
+
+
+
+
+
+
+		<!--start-content-->
+			<div class="gallery">
+					<div class="clear"> </div>
+					<div class="container">
+					
+			<div id="gallerylist">
+			
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image1.png"  alt="博苑新田幼儿园"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2> 博苑新田幼儿园</h2>
+						 	<h3>博苑新田幼儿园</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog2">
+						<img src="images/image2.png"  alt="Image 2"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>威海市市级机关幼儿园</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog3">
+						<img src="images/image5.jpg"  alt="Image 3" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>威海市环翠教育幼儿园</h2>
+						 	<h3>威海市环翠教育幼儿园</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image4.jpg"  alt="Image 4" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>英华幼儿园</h2>
+						 	<h3>英华幼儿园</h3>
+						</div>
+					</a>
+				</div>
+
+			</div>																
+           
+
+         <style>
+         	
+         .friend .row a{
+          color: #666;
+          font-size: 0.8em;
+          line-height: 2em
+         }
+         .friend .row a:hover{
+          color:#e8603c
+         }
+         </style>
+           <div class="heading" style="margin-top:2em;">
+				<h2>友情链接</h2>
+				<h6> </h6>
+					<div class="clear"> </div>
+			</div>
+            	<div class="container friend" >		
+                   <div class="row">
+					<a href="http://www.weihai.tv/" class="col-md-3" target="_blank">
+						威海电视台
+					</a>
+					<a href="http://www.minestar.cn/" class="col-md-3" target="_blank">
+						威海晶合
+					</a>
+					<a href="http://www.jlpbke.zgyeyw.cn/1/Default.aspx" class="col-md-3" target="_blank">
+						贝克尔幼儿园
+					</a>
+
+					<a href="http://baby.whedu21.com/" class="col-md-3" target="_blank">
+						威海市教育实验幼儿园
+					</a>
+					<a href="http://www.kuailebaobei.cn/" class="col-md-3" target="_blank">
+						机关幼儿园
+					</a>
+
+					<a href="http://www.kuailebaobei.cn/" class="col-md-3" target="_blank">
+						金色摇篮幼儿园
+					</a>
+				</div>
+				</div>
+
+
+		</div>
+
+	</div><!-- container -->
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	
+	<script type="text/javascript">$('body').flipLightBox()</script>
+	<div class="clear"> </div>
+	</div>
+
+</div>
+</div>
+<!--End-gallery-->
+<!--start footer-->
+<div class="footer">
+	<div class="footer-main wrap">
+	<div class="footer-grids">
+		<div class="fgrid">
+			<h3>关于我们</h3>
+			<p> 博苑新田幼儿园成立于2011年8月，占地面积2600m平米，建筑面积3341平米，拥有10个教学班，三十多名教职工；幼儿园配有游泳馆、多媒体教学、种植园等多元化教育资源。开放24小时视频直播，在威海打造一所公开化、透明化的幼儿园。</p>
+			<p> 幼儿园配有游泳馆、多媒体教学、种植园等多元化教育资源。开放24小时视频直播，在威海打造一所公开化、透明化的幼儿园。</p>
+		</div>
+		<div class="fgrid">
+			<h3>站内导航</h3>
+				<div>
+					<p style="float: left;margin-right: 2em"><a href="#">关于我们</a> </p>
+					<p><a href="#">家长课堂</a> </p>
+					
+				</div>
+				<div>
+				<p style="float: left;margin-right: 2em"><a href="#">知名园所</a> </p>
+					<p><a href="#">在线辅导</a></p>
+					
+				</div>
+				<div>
+				<p style="float: left;margin-right: 2em"><a href="#">家长课堂</a> </p>
+					<p><a href="#">新闻资讯</a></p>
+				</div>
+		</div>
+		<div class="fgrid">
+			<h3>联系我们</h3>
+			<p>地址:山东省威海市高区火炬路-213-2号创新创业基地A座446</p>
+			<p>邮箱：information@jetro.com</p>
+			
+			<p>联系电话：0631-5687555</p>
+				<div class="social-media">
+			     <ul>
+			        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+				</ul>
+		</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+</div>
+<!--end footer-->
+<div class="copy-right">
+			<div class="wrap">
+				<div class="copy-right-left">
+					<p>Copyright &copy; 2014.Company name All rights reserved.</p>
+				</div>
+			</div>
+			</div>
+</div>
+
+</body>
+</html>
